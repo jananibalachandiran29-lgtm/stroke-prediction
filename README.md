@@ -419,5 +419,5 @@ It contains the project description, methodology, experimental results, limitati
 **Janani B**  
 **25MIM10094**  
 **Integrated M.Tech AI Branch**  
-**CSA2001 – Introduction to AI**  
+**CSA2001 – Fundamentals in AI & ML**  
 **VIT Bhopal University**
