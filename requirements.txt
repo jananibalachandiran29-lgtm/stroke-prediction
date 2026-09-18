@@ -1,0 +1,8 @@
+Pillow
+flask
+matplotlib
+numpy
+pandas
+requests
+scikit-learn
+streamlit
