@@ -1,7 +1,10 @@
 # Stroke Prediction Using Machine Learning
 
-A simple academic machine learning project for CSA2001.
+An end-to-end machine learning pipeline for pre-processing clinical data, building predictive models, and evaluating stroke risk.
 
+## Overview
+
+This repository contains a modular Python application designed to predict patient stroke risk based on demographic and clinical attributes.
 
 ## 1. Project Overview
 
@@ -139,78 +142,7 @@ The positive-class results should be interpreted together with the class imbalan
 
 ---
 
-## 8. CSA2001 – Fundamentals in AI & ML Syllabus Coverage
-
-This project is submitted for **CSA2001 – Fundamentals in AI & ML**. The complete course syllabus consists of the following COs:
-
-### CO1 – Introduction to AI
-- Introduction to AI
-- History and Background
-- Impact on Foundations of Engineering
-- Future Directions
-- Intelligent Agents and Environments
-- Concept of Rationality
-- Nature of Environments
-- Structure of Agents
-- Problem Solving Agents
-
-### CO2 – Problem Solving Methods & Knowledge Representation
-- Problem Solving Methods
-- Uninformed Search
-- Informed Search
-- Adversarial Search
-- Local Search Algorithms
-- Knowledge Representation
-- Propositional Logic
-- First Order Predicate Logic
-- Prolog Programming
-
-### CO3 – From Classical Statistics to Machine Learning
-- Probability Theory
-- Linear Algebra
-- Convex Optimization
-- Statistical Decision Theory
-- Probability for ML
-- Axioms of Probability
-- Random Variables
-- Common Distributions
-- Mean and Variance
-- Joint Distributions
-- Conditional Distributions
-- Data Representations
-- Feature Learning
-- Applications
-
-### CO4 – Machine Learning Basics
-- Introduction to Machine Learning
-- Supervised Learning
-- Unsupervised Learning
-- Reinforcement Learning
-- Perspectives and Issues in Machine Learning
-- Classification
-- Clustering
-- Linear Regression and Applications
-- Overfitting and Underfitting
-- Hyper-parameters
-- Validation Sets
-- Estimators
-- Bias and Variance
-- Bayesian Statistics
-- Curse of Dimensionality
-
-### CO5 – Case Studies
-- Transfer Learning
-- Learning from Pre-trained Models
-- NLP and its Applications
-- Face Detection
-- Sentiment Analyzer
-- Reinforcement Applications
-
-**Note:** The project specifically demonstrates concepts from the AI/ML portions of the course, particularly **CO3 and CO4**. The syllabus above is included in full for course documentation; topics not directly implemented by this project are not claimed as implemented project features.
-
----
-
-## 9. Repository Structure
+## 8. Repository Structure
 
 ```text
 stroke-prediction/
@@ -405,11 +337,3 @@ It contains the project description, methodology, experimental results, limitati
 
 ---
 
-## Student Information
-
-- **Name:** Janani B
-- **Registration Number:** 25MIM10094
-- **Program:** Integrated M.Tech Artificial Intelligence
-- **Year:** 2nd Year
-- **University:** VIT Bhopal University
-- **Submission Date:** 18 September 2026
