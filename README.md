@@ -2,16 +2,6 @@
 
 A simple academic machine learning project for CSA2001.
 
-## Student Details
-
-- **Name:** Janani B
-- **Registration Number:** 25MIM10094
-- **Program:** Integrated M.Tech AI Branch
-- **Course Code:** CSA2001
-- **Course Name:** Fundamentals in AI & ML
-- **University:** VIT Bhopal University
-
----
 
 ## 1. Project Overview
 
