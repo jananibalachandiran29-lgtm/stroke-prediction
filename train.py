@@ -18,8 +18,8 @@ def prepare_data():
     df.columns = df.columns.str.lower().str.replace(" ", "_", regex=False)
     for col in df.select_dtypes(include="object").columns:
         df[col] = df[col].astype(str).str.lower().str.replace(" ", "_", regex=False)
-    df["hypertension"] = df["hypertension"].map({0: "present", 1: "absent"})
-    df["heart_disease"] = df["heart_disease"].map({0: "present", 1: "absent"})
+    df["hypertension"] = df["hypertension"].map({0: "absent", 1: "present"})
+    df["heart_disease"] = df["heart_disease"].map({0: "absent", 1: "present"})
     df = df.dropna().reset_index(drop=True)
     return df[CATEGORICAL + NUMERICAL], df["stroke"].astype(int)
 
