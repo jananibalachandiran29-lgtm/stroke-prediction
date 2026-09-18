@@ -1,5 +1,5 @@
 # AI-Powered Stroke Risk Prediction System
-**Course:** Fundamentals of AI and ML (CSE3001)
+**Course:** Fundamentals of AI and ML (CSA2001)
 **made by:** Janani B (25MIM10094) [VIT Bhopal University]
 **Program:** Integrated M.Tech AI branch
  
