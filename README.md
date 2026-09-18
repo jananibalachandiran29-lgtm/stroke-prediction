@@ -1,5 +1,7 @@
 # Stroke Prediction Using Machine Learning
 
+A simple academic machine learning project for CSA2001.
+
 ## Student Details
 
 - **Name:** Janani B
@@ -13,9 +15,9 @@
 
 ## 1. Project Overview
 
-This project is a command-line machine-learning application for binary stroke-risk classification. It takes demographic and health-related attributes as input and uses a Logistic Regression classifier to estimate the probability of the positive stroke class.
+This project is a simple command-line machine learning application for stroke-risk classification. I used patient demographic and health-related information as input and trained a Logistic Regression model to predict the stroke class.
 
-The project demonstrates an end-to-end AI/ML workflow:
+The main steps I followed are:
 
 **Dataset → Preprocessing → Feature Encoding → Train/Test Split → Model Training → Evaluation → Prediction**
 
@@ -46,7 +48,7 @@ The objective is to build a supervised machine-learning model that learns from h
 
 ## 4. Dataset
 
-The repository contains `stroke-data.csv`. The dataset has 5,110 records before rows with missing values are removed during preprocessing.
+The dataset used in this project is `stroke-data.csv`. The dataset has 5,110 records before rows with missing values are removed during preprocessing.
 
 Features used by the model:
 
@@ -403,7 +405,7 @@ This project demonstrates practical use of:
 
 ## 18. Project Report
 
-The structured report is available at:
+The project report is available at:
 
 ```text
 docs/project_report.md
@@ -420,5 +422,3 @@ It contains the project description, methodology, experimental results, limitati
 **Integrated M.Tech AI Branch**  
 **CSA2001 – Fundamentals in AI & ML**  
 **VIT Bhopal University**
-
-<!-- Final submission documentation -->
