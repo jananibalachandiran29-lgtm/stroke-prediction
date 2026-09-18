@@ -4,7 +4,8 @@
 - **Name:** Janani B
 - **Registration Number:** 25MIM10094
 - **Program:** Integrated M.Tech AI Branch
-- **Course:** Fundamentals of Artificial Intelligence and Machine Learning
+- **Course Code:** CSA2001
+- **Course:** Fundamentals in AI & ML
 - **University:** VIT Bhopal University
 
 ## 1. Title
