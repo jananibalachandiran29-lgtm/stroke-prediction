@@ -5,7 +5,8 @@
 - **Name:** Janani B
 - **Registration Number:** 25MIM10094
 - **Program:** Integrated M.Tech AI Branch
-- **Course:** Fundamentals of Artificial Intelligence and Machine Learning
+- **Course Code:** CSA2001
+- **Course Name:** Introduction to AI
 - **University:** VIT Bhopal University
 
 ---
@@ -146,7 +147,78 @@ The positive-class results should be interpreted together with the class imbalan
 
 ---
 
-## 8. Repository Structure
+## 8. CSA2001 – Introduction to AI Syllabus Coverage
+
+This project is submitted for **CSA2001 – Introduction to AI**. The complete course syllabus consists of the following COs:
+
+### CO1 – Introduction to AI
+- Introduction to AI
+- History and Background
+- Impact on Foundations of Engineering
+- Future Directions
+- Intelligent Agents and Environments
+- Concept of Rationality
+- Nature of Environments
+- Structure of Agents
+- Problem Solving Agents
+
+### CO2 – Problem Solving Methods & Knowledge Representation
+- Problem Solving Methods
+- Uninformed Search
+- Informed Search
+- Adversarial Search
+- Local Search Algorithms
+- Knowledge Representation
+- Propositional Logic
+- First Order Predicate Logic
+- Prolog Programming
+
+### CO3 – From Classical Statistics to Machine Learning
+- Probability Theory
+- Linear Algebra
+- Convex Optimization
+- Statistical Decision Theory
+- Probability for ML
+- Axioms of Probability
+- Random Variables
+- Common Distributions
+- Mean and Variance
+- Joint Distributions
+- Conditional Distributions
+- Data Representations
+- Feature Learning
+- Applications
+
+### CO4 – Machine Learning Basics
+- Introduction to Machine Learning
+- Supervised Learning
+- Unsupervised Learning
+- Reinforcement Learning
+- Perspectives and Issues in Machine Learning
+- Classification
+- Clustering
+- Linear Regression and Applications
+- Overfitting and Underfitting
+- Hyper-parameters
+- Validation Sets
+- Estimators
+- Bias and Variance
+- Bayesian Statistics
+- Curse of Dimensionality
+
+### CO5 – Case Studies
+- Transfer Learning
+- Learning from Pre-trained Models
+- NLP and its Applications
+- Face Detection
+- Sentiment Analyzer
+- Reinforcement Applications
+
+**Note:** The project specifically demonstrates concepts from the AI/ML portions of the course, particularly **CO3 and CO4**. The syllabus above is included in full for course documentation; topics not directly implemented by this project are not claimed as implemented project features.
+
+---
+
+## 9. Repository Structure
 
 ```text
 stroke-prediction/
@@ -167,7 +239,7 @@ stroke-prediction/
 
 ---
 
-## 9. Requirements
+## 10. Requirements
 
 Install **Python 3.9 or later** and Git.
 
@@ -179,7 +251,7 @@ pip install -r requirements.txt
 
 ---
 
-## 10. Environment Setup
+## 11. Environment Setup
 
 Clone the repository:
 
@@ -199,7 +271,7 @@ Optional but recommended: create a virtual environment.
 
 ```bash
 python -m venv venv
-venv\Scripts\activate
+venv\\Scripts\\activate
 ```
 
 ### Linux/macOS
@@ -217,7 +289,7 @@ pip install -r requirements.txt
 
 ---
 
-## 11. Train and Evaluate the Model
+## 12. Train and Evaluate the Model
 
 From the repository root, run:
 
@@ -236,7 +308,7 @@ The program will:
 
 ---
 
-## 12. Run the Command-Line Prediction Application
+## 13. Run the Command-Line Prediction Application
 
 After training, run:
 
@@ -275,7 +347,7 @@ Class meaning: 0 = No stroke, 1 = Stroke
 
 ---
 
-## 13. Reproducibility
+## 14. Reproducibility
 
 The experiment is reproducible using the fixed `random_state=42` and stratified 80/20 train-test split.
 
@@ -290,7 +362,7 @@ The displayed metrics are generated from the actual test split at runtime.
 
 ---
 
-## 14. Limitations
+## 15. Limitations
 
 - The model is dependent on the dataset used for training.
 - The target variable is imbalanced, so accuracy alone is not sufficient to describe performance.
@@ -300,7 +372,7 @@ The displayed metrics are generated from the actual test split at runtime.
 
 ---
 
-## 15. Future Scope
+## 16. Future Scope
 
 Possible extensions include:
 
@@ -313,7 +385,7 @@ Possible extensions include:
 
 ---
 
-## 16. Learning Outcomes
+## 17. Learning Outcomes
 
 This project demonstrates practical use of:
 
@@ -330,7 +402,7 @@ This project demonstrates practical use of:
 
 ---
 
-## 17. Project Report
+## 18. Project Report
 
 The structured report is available at:
 
@@ -342,9 +414,10 @@ It contains the project description, methodology, experimental results, limitati
 
 ---
 
-## 18. Student Information
+## 19. Student Information
 
 **Janani B**  
 **25MIM10094**  
 **Integrated M.Tech AI Branch**  
+**CSA2001 – Introduction to AI**  
 **VIT Bhopal University**
