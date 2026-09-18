@@ -422,3 +422,13 @@ It contains the project description, methodology, experimental results, limitati
 **Integrated M.Tech AI Branch**  
 **CSA2001 – Fundamentals in AI & ML**  
 **VIT Bhopal University**
+
+
+## Student Information
+
+- **Name:** Janani B
+- **Registration Number:** 25MIM10094
+- **Program:** Integrated M.Tech Artificial Intelligence
+- **Year:** 2nd Year
+- **University:** VIT Bhopal University
+- **Submission Date:** 18 September 2026
