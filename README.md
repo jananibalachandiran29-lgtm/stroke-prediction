@@ -415,15 +415,6 @@ It contains the project description, methodology, experimental results, limitati
 
 ---
 
-## 19. Student Information
-
-**Janani B**  
-**25MIM10094**  
-**Integrated M.Tech AI Branch**  
-**CSA2001 – Fundamentals in AI & ML**  
-**VIT Bhopal University**
-
-
 ## Student Information
 
 - **Name:** Janani B
