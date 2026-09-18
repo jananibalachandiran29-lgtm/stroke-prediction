@@ -6,7 +6,7 @@
 - **Registration Number:** 25MIM10094
 - **Program:** Integrated M.Tech AI Branch
 - **Course Code:** CSA2001
-- **Course Name:** Introduction to AI
+- **Course Name:** Fundamentals in AI & ML
 - **University:** VIT Bhopal University
 
 ---
@@ -149,7 +149,7 @@ The positive-class results should be interpreted together with the class imbalan
 
 ## 8. CSA2001 – Introduction to AI Syllabus Coverage
 
-This project is submitted for **CSA2001 – Introduction to AI**. The complete course syllabus consists of the following COs:
+This project is submitted for **CSA2001 – Fundamentals in AI & ML**. The complete course syllabus consists of the following COs:
 
 ### CO1 – Introduction to AI
 - Introduction to AI
