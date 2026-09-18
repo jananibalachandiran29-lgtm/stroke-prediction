@@ -1,7 +1,5 @@
 from pathlib import Path
 import pickle
-import pandas as pd
-
 ROOT = Path(__file__).resolve().parent
 MODEL_PATH = ROOT / "model.pkl"
 
@@ -44,8 +42,8 @@ def main():
     patient = {
         "gender": input("Gender (Male/Female/Other): ").strip().lower().replace(" ", "_"),
         "age": ask_number("Age: "),
-        "hypertension": {0: "present", 1: "absent"}[ask_binary("Hypertension (0 = No, 1 = Yes): ")],
-        "heart_disease": {0: "present", 1: "absent"}[ask_binary("Heart disease (0 = No, 1 = Yes): ")],
+        "hypertension": {0: "absent", 1: "present"}[ask_binary("Hypertension (0 = No, 1 = Yes): ")],
+        "heart_disease": {0: "absent", 1: "present"}[ask_binary("Heart disease (0 = No, 1 = Yes): ")],
         "ever_married": input("Ever married (Yes/No): ").strip().lower().replace(" ", "_"),
         "work_type": input("Work type (Private/Self-employed/Govt_job/children/Never_worked): ").strip().lower().replace(" ", "_"),
         "residence_type": input("Residence type (Urban/Rural): ").strip().lower().replace(" ", "_"),
