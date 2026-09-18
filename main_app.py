@@ -1,84 +1,69 @@
+from pathlib import Path
 import pickle
 import pandas as pd
 
+ROOT = Path(__file__).resolve().parent
+MODEL_PATH = ROOT / "model.pkl"
+
+def load_artifact():
+    try:
+        with MODEL_PATH.open("rb") as f:
+            a = pickle.load(f)
+        if isinstance(a, dict) and "model" in a and "vectorizer" in a:
+            return a["model"], a["vectorizer"]
+    except (FileNotFoundError, EOFError, pickle.UnpicklingError, AttributeError):
+        pass
+    print("A compatible model was not found. Training the model now...\n")
+    from train import train_model
+    train_model()
+    with MODEL_PATH.open("rb") as f:
+        a = pickle.load(f)
+    return a["model"], a["vectorizer"]
+
+def ask_binary(prompt):
+    while True:
+        v = input(prompt).strip()
+        if v in {"0", "1"}: return int(v)
+        print("Please enter 0 or 1.")
+
+def ask_number(prompt, minimum=0):
+    while True:
+        try:
+            v = float(input(prompt).strip())
+            if v >= minimum: return v
+        except ValueError:
+            pass
+        print(f"Please enter a number >= {minimum}.")
 
 def main():
-    print("=" * 55)
-    print("          AI-POWERED STROKE RISK PREDICTION")
-    print("=" * 55)
-
-    # Load trained model
-    try:
-        with open("model.pkl", "rb") as file:
-            model = pickle.load(file)
-    except FileNotFoundError:
-        print("\nError: model.pkl not found.")
-        print("Please run train.py first.")
-        return
-
-    print("\nEnter patient information:\n")
-
-    try:
-        gender = input("Gender (Male/Female/Other): ")
-        age = float(input("Age: "))
-        hypertension = int(input("Hypertension (0 = No, 1 = Yes): "))
-        heart_disease = int(input("Heart Disease (0 = No, 1 = Yes): "))
-        ever_married = input("Ever Married (Yes/No): ")
-        work_type = input("Work Type: ")
-        residence_type = input("Residence Type (Urban/Rural): ")
-        avg_glucose_level = float(input("Average Glucose Level: "))
-        bmi = float(input("BMI: "))
-        smoking_status = input(
-            "Smoking Status (formerly smoked/never smoked/smokes/Unknown): "
-        )
-
-    except ValueError:
-        print("\nInvalid input. Please enter the correct values.")
-        return
-
-    # Create patient data
-    patient = pd.DataFrame([{
-        "gender": gender,
-        "age": age,
-        "hypertension": hypertension,
-        "heart_disease": heart_disease,
-        "ever_married": ever_married,
-        "work_type": work_type,
-        "Residence_type": residence_type,
-        "avg_glucose_level": avg_glucose_level,
-        "bmi": bmi,
-        "smoking_status": smoking_status
-    }])
-
-    # Make prediction
-    try:
-        prediction = model.predict(patient)[0]
-        probability = model.predict_proba(patient)[0][1]
-
-        print("\n" + "=" * 55)
-        print("                    RESULT")
-        print("=" * 55)
-
-        print(f"Predicted stroke probability: {probability * 100:.2f}%")
-
-        if prediction == 1:
-            print("Prediction: Stroke-risk class")
-        else:
-            print("Prediction: No-stroke class")
-
-        # Heuristic safety rule
-        if age >= 65 and hypertension == 1 and heart_disease == 1:
-            print("\nHeuristic Alert: High-risk profile detected.")
-            print("Multiple risk factors require professional medical attention.")
-
-        print("=" * 55)
-        print("\nDisclaimer:")
-        print("This project is for academic and educational purposes only.")
-        print("It is not a medical diagnostic system.")
-
-    except Exception as error:
-        print("\nPrediction error:", error)
-
+    model, vectorizer = load_artifact()
+    print("=" * 60)
+    print("       AI/ML STROKE RISK PREDICTION SYSTEM")
+    print("=" * 60)
+    print("Academic project only — this is not a medical diagnosis.\n")
+    patient = {
+        "gender": input("Gender (Male/Female/Other): ").strip().lower().replace(" ", "_"),
+        "age": ask_number("Age: "),
+        "hypertension": {0: "present", 1: "absent"}[ask_binary("Hypertension (0 = No, 1 = Yes): ")],
+        "heart_disease": {0: "present", 1: "absent"}[ask_binary("Heart disease (0 = No, 1 = Yes): ")],
+        "ever_married": input("Ever married (Yes/No): ").strip().lower().replace(" ", "_"),
+        "work_type": input("Work type (Private/Self-employed/Govt_job/children/Never_worked): ").strip().lower().replace(" ", "_"),
+        "residence_type": input("Residence type (Urban/Rural): ").strip().lower().replace(" ", "_"),
+        "avg_glucose_level": ask_number("Average glucose level: "),
+        "bmi": ask_number("BMI: "),
+        "smoking_status": input("Smoking status (formerly smoked/never smoked/smokes/Unknown): ").strip().lower().replace(" ", "_")
+    }
+    X = vectorizer.transform([patient])
+    probability = float(model.predict_proba(X)[0, 1])
+    prediction = int(model.predict(X)[0])
+    print("\n" + "=" * 60)
+    print("RESULT")
+    print("=" * 60)
+    print(f"Predicted stroke probability: {probability * 100:.2f}%")
+    print(f"Predicted class: {prediction}")
+    print("Class meaning: 0 = No stroke, 1 = Stroke")
+    print("=" * 60)
+    print("This output is for academic demonstration only and is not a diagnosis.")
 
 if __name__ == "__main__":
     main()
